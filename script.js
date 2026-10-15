@@ -63,3 +63,12 @@ if (document.readyState === "complete") {
 
   document.body.classList.contains("dark-mode")
 );
+
+/* ===== PAGE LOADER FIX ===== */
+window.addEventListener("load", function () {
+  const loader = document.getElementById("pageLoader");
+
+  if (loader) {
+    loader.classList.add("is-hidden");
+  }
+});
