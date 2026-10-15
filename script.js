@@ -48,5 +48,18 @@ cards.forEach((card) => {
 
 // ===== 3. INITIALIZE =====
 updateThemeButton(
+  
+const pageLoader = document.getElementById("pageLoader");
+
+function hideLoader() {
+  pageLoader?.classList.add("is-hidden");
+}
+
+if (document.readyState === "complete") {
+  hideLoader();
+} else {
+  window.addEventListener("load", hideLoader, { once: true });
+}
+
   document.body.classList.contains("dark-mode")
 );
